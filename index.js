@@ -12,8 +12,8 @@ const {
 } = process.env
 
 kue.createQueue({
-  prefix: process.env.KUE_PREFIX,
-  redis: process.env.REDIS_URL || 'redis://localhost:6379'
+  prefix: KUE_PREFIX,
+  redis: REDIS_URL || 'redis://redis:6379'
 })
 
 ui.setup({
@@ -30,7 +30,7 @@ app.use((req, res, next) => {
     return res.send(401)
   }
 
-    next()
+  next()
 })
 
 app.use('/api', kue.app)
