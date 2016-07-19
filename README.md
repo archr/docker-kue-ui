@@ -3,7 +3,7 @@
 
 ## Run
 ```sh
-  $ docker run -it -p 5000:5000 --link redis -e USERNAME=admin PASSWORD=password -e KUE_PREFIX=queue archr/kue-ui
+  docker run -it -p 5000:5000 --link redis -e USERNAME=admin -e PASSWORD=password -e KUE_PREFIX=queue archr/kue-ui
 ```
 
 ## Licence
